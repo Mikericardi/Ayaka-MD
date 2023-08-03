@@ -1,0 +1,10 @@
+let handler = async (m, { conn }) => {
+	
+	m.reply('Work')
+	
+}
+
+
+handler.command = /^(testtt)$/i
+
+export default handler

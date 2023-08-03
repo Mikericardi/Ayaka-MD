@@ -1,0 +1,62 @@
+//await conn.sendButton(m.chat, `${bottime}\n\nDone @${m.sender.split`@`[0]}\n\nCommand: ${_q}\n\nUrl: ${json.url}`, wm, json.url, [['𝐍 𝐄 𝐗 𝐓', `${_p + _q}`], ['𝐌 𝐄 𝐍 𝐔', '.menu'], ['𝐃 𝐎 𝐍 𝐀 𝐒 𝐈', '.donasi']], m)
+await conn.send3ButtonVid(m.chat, json.url, `${bottime}\n\nDone @${m.sender.split`@`[0]}\n\nCommand: ${_q}\n\nUrl: ${json.url}`, wm, '𝐍 𝐄 𝐗 𝐓', `${_p + _q}`, '𝐌 𝐄 𝐍 𝐔', '.menu', '𝐃 𝐎 𝐍 𝐀 𝐒 𝐈', '.donasi', m)
+
+// Hilih
+import fetch from 'node-fetch'
+let handler = async (m, { conn, command: _q, usedPrefix: _p }) => {
+await m.reply(md)
+let res = await fetch('https://api.waifu.pics/sfw/bully')
+if (!res.ok) throw res.text()
+let json = await res.json()
+if (!json.url) throw `Error, Mungkin Api Mati`
+await conn.send3ButtonVid(m.chat, json.url, `${bottime}\n\nDone @${m.sender.split`@`[0]}\n\nCommand: ${_q}\n\nUrl: ${json.url}`, wm, '𝐍 𝐄 𝐗 𝐓', `${_p + _q}`, '𝐌 𝐄 𝐍 𝐔', '.menu', '𝐃 𝐎 𝐍 𝐀 𝐒 𝐈', '.donasi', m)
+}
+handler.help = ['bully']
+handler.tags = ['anime']
+handler.command = /^(bully)$/i
+handler.register = true
+handler.limit = 15
+
+export default handler
+
+// Hilih
+import fetch from 'node-fetch'
+let handler = async (m, { conn, command: _q, usedPrefix: _p }) => {
+await m.reply(md)
+let res = await fetch('https://api.waifu.pics/sfw/waifu')
+if (!res.ok) throw res.text()
+let json = await res.json()
+if (!json.url) throw `Error, Mungkin Api Mati`
+await conn.sendButton(m.chat, `${bottime}\n\nDone @${m.sender.split`@`[0]}\n\nCommand: ${_q}\n\nUrl: ${json.url}`, wm, json.url, [['𝐍 𝐄 𝐗 𝐓', `${_p + _q}`], ['𝐌 𝐄 𝐍 𝐔', '.menu'], ['𝐃 𝐎 𝐍 𝐀 𝐒 𝐈', '.donasi']], m)
+}
+handler.help = ['animewaifu', 'waifu']
+handler.tags = ['anime']
+handler.command = /^(animewaifu|waifu)$/i
+handler.limit = 15
+
+export default handle
+
+//await conn.sendButton(m.chat, mn, mii, fp, [['𝐀ʟʟ 𝐌ᴇɴᴜ', `.? all`], ['𝐋ɪsᴛ 𝐌ᴇɴᴜ', '.menulist'], ['𝐃ᴏɴᴀsɪ', '.donasi']], m, { contextInfo: { externalAdReply :{ showAdAttribution: true, mediaUrl: sig, mediaType: "VIDEO", description: ``, title: `👋 Hay Kak :> ${name}`, body: '⫹⫺ 𝐑𝐏𝐆 𝐁𝐎𝐓 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏', thumbnail: fp, sourceUrl: ''} } } )
+
+//await conn.send3ButtonDoc(m.chat, mn, mii, '𝐀ʟʟ 𝐌ᴇɴᴜ','.? all', '𝐋ɪsᴛ 𝐌ᴇɴᴜ', '.menulist', '𝐃ᴏɴᴀsɪ', '.donasi', m, { contextInfo: { externalAdReply :{ showAdAttribution: true, mediaUrl: sig, mediaType: "VIDEO", description: ``, title: `👋 Hay Kak :> ${name}`, body: '⫹⫺ 𝐑𝐏𝐆 𝐁𝐎𝐓 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏', thumbnail: fp, sourceUrl: ''} } } ) 
+
+await conn.sendButton(m.chat, runtt, botdate, pu, [['Owner', '.owner'], ['Menu', '.Menu']], fliveLoc22, {
+			contextInfo: {
+				forwardingScore: fsizedoc,
+				externalAdReply: {
+                    body: bottime,
+    containsAutoReply: true,
+    mediaType: 1,
+    mediaUrl: syt,
+    renderLargerThumbnail: true,
+    showAdAttribution: false,
+    sourceId: `© ${namebot}`,
+    sourceType: 'PDF',
+    previewType: 'PDF',
+    sourceUrl: wame,
+    thumbnail: await (await fetch(pu)).buffer(),
+    thumbnailUrl: syt,
+    title: wm,
+				}
+			}
+})
